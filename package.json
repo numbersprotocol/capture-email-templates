@@ -1,0 +1,26 @@
+{
+  "name": "capture-email-templates",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Hosting email templates for Capture services.",
+  "main": "preview.js",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "vite",
+    "test": "html-validate \"templates/**/*.html\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/numbersprotocol/capture-email-templates.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/numbersprotocol/capture-email-templates/issues"
+  },
+  "homepage": "https://github.com/numbersprotocol/capture-email-templates#readme",
+  "dependencies": {
+    "html-validate": "^9.1.0",
+    "vite": "^6.0.6"
+  }
+}

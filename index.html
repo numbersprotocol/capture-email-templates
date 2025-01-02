@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template Preview</title>
+  <style>
+    body {
+      display: flex;
+      font-family: Arial, sans-serif;
+    }
+    #sidebar {
+      width: 30%;
+      border-right: 1px solid #ccc;
+      padding: 10px;
+      overflow-y: auto;
+    }
+    #preview {
+      flex: 1;
+      padding: 10px;
+    }
+    .template-item {
+      cursor: pointer;
+      padding: 5px;
+      border-bottom: 1px solid #ddd;
+    }
+    .template-item:hover {
+      background: #f0f0f0;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const templates = [{"service":"capture","template":"password_changed_confirmation","language":"en-us","rawContent":"","data":{}},{"service":"capture","template":"password_reset","language":"en-us","rawContent":"<html>\n  <head>\n    <title></title>\n  </head>\n  <body>\n    <table\n      align=\"center\"\n      border=\"0\"\n      cellpadding=\"0\"\n      cellspacing=\"0\"\n      width=\"100%\"\n    >\n      <tr>\n        <td align=\"left\" style=\"padding: 30px\">\n          <p>您最近請求變更 {{service_info.display_name}} 帳戶的密碼。</p>\n        </td>\n      </tr>\n      <tr>\n        <td align=\"left\" style=\"padding: 30px\">\n          <p>請至以下網頁重設您的密碼：</p>\n          <a href=\"{{actionUrl}}\">{{actionUrl}}</a>\n        </td>\n      </tr>\n    </table>\n    <div>\n      <p>\n        敬祝 平安順心\n        <br />\n\n        {{service_info.display_name}}敬上\n        <br />\n\n        <img\n          style=\"display: block; border: 0px; max-width: 50px; padding: 4px\"\n          title=\"Logo\"\n          src=\"{{service_info.service_logo}}\"\n          alt=\"\"\n          width=\"50\"\n          height=\"50\"\n        />\n      </p>\n    </div>\n  </body>\n</html>\n","data":{"actionUrl":"https://api.numbersprotocol.io/account/password-reset/0/0","service_info":{"display_name":"The Capture Team","service_logo":"https://static-cdn.numbersprotocol.io/Capture+GradWhite+App.png","service_email":"service@numbersprotocol.io"}}},{"service":"capture","template":"password_reset","language":"zh-hant","rawContent":"<html>\n  <head>\n    <title></title>\n  </head>\n  <body>\n    <table\n      align=\"center\"\n      border=\"0\"\n      cellpadding=\"0\"\n      cellspacing=\"0\"\n      width=\"100%\"\n    >\n      <tr>\n        <td align=\"left\" style=\"padding: 30px\">\n          <p>您最近請求變更 {{service_info.display_name}} 帳戶的密碼。</p>\n        </td>\n      </tr>\n      <tr>\n        <td align=\"left\" style=\"padding: 30px\">\n          <p>請至以下網頁重設您的密碼：</p>\n          <a href=\"{{actionUrl}}\">{{actionUrl}}</a>\n        </td>\n      </tr>\n    </table>\n    <div>\n      <p>\n        敬祝 平安順心\n        <br />\n\n        {{service_info.display_name}}敬上\n        <br />\n\n        <img\n          style=\"display: block; border: 0px; max-width: 50px; padding: 4px\"\n          title=\"Logo\"\n          src=\"{{service_info.service_logo}}\"\n          alt=\"\"\n          width=\"50\"\n          height=\"50\"\n        />\n      </p>\n    </div>\n  </body>\n</html>\n","data":{"actionUrl":"https://api.numbersprotocol.io/account/password-reset/0/0","service_info":{"display_name":"The Capture Team","service_logo":"https://static-cdn.numbersprotocol.io/Capture+GradWhite+App.png","service_email":"service@numbersprotocol.io"}}},{"service":"capture","template":"product_confirmed","language":"en-us","rawContent":"<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>Your Capture NFT Purchase Confirmation</title>\n  </head>\n\n  <body>\n    <span>Hello,</span><br />\n\n    <div>\n      <p>\n        Thank you for joining us in building a better digital future through\n        Capture. Your NFT purchase has been confirmed. Below are the details of\n        your order:\n      </p>\n      <hr />\n\n      <div><strong>Order Number: </strong>{{order.id}}</div>\n      <div><strong>Order Date: </strong>{{order.date}}</div>\n      <div><strong>Payment Amount: </strong>{{order.payment_amount}}</div>\n      <div><strong>Payment Method: </strong>{{order.payment_method}}</div>\n      <div><strong>Contact Email: </strong>{{service_info.service_email}}</div>\n      <hr />\n\n      <p><strong>Purchased Assets</strong></p>\n      <ol>\n        <li>\n          <strong>Asset Nid: </strong>\n          {{order.nid}}\n        </li>\n        <li>\n          <strong>NFT Network: </strong\n          ><a href=\"{{order.nft_network_link}}\">{{order.nft_network}}</a>\n        </li>\n        <li>\n          <strong>NFT Token ID: </strong\n          ><a href=\"{{order.nft_token_link}}\">{{order.nft_token_id}}</a>\n        </li>\n      </ol>\n      <hr />\n\n      <p><strong>Download Instructions</strong></p>\n\n      <p>\n        Once the NFT minting and transfer are complete, you will be able to\n        download your purchased NFT from this\n        <a href=\"{{order.nft_download_link}}\">link</a>\n        within 24 hours. Each NFT includes its own specific license terms.\n        Please visit the\n        <a href=\"{{order.nft_page_link}}\">Capture page</a>\n        of your NFT to review the attached license.\n      </p>\n\n      <p>\n        If you have any questions or need assistance, please don't hesitate to\n        contact our support team at\n        <a href=\"mailto:{{service_info.service_email}}\"\n          >{{service_info.service_email}}</a\n        >.\n      </p>\n    </div>\n\n    <div>\n      <p>\n        Best regards,\n        <br />\n\n        {{service_info.display_name}}\n        <br />\n\n        <img\n          style=\"display: block; border: 0px; max-width: 50px; padding: 4px\"\n          title=\"Logo\"\n          src=\"{{service_info.service_logo}}\"\n          alt=\"\"\n          width=\"50\"\n          height=\"50\"\n        />\n      </p>\n    </div>\n\n    <img\n      src=\"http://mailman.numbersprotocol.io/wf/open?upn=u001.nhRthI-2Fe2lEovw0OegR3JN5Gwhi3f8xG-2F8yg27sBoLajIi764tWHJuURUv5QVqOS4XmLgJcS6y-2B117EY-2FmOCt8Ail8ArN5CaOR-2FQqZfW5jGRar07ofxBDY7K6B4jwassRX6ZiJPIUaKT4dju8saXApdsz-2BXjDjuQgkr7fpwymhu9kFH1pNHz847G3nftgiiuHJCN90HNx3MbH6lLmAn5ZYSoaAfZIPMfcwzrfT5LQD8-3D\"\n      alt=\"\"\n      width=\"1\"\n      height=\"1\"\n      border=\"0\"\n      style=\"\n        height: 1px !important;\n        width: 1px !important;\n        border-width: 0 !important;\n        margin-top: 0 !important;\n        margin-bottom: 0 !important;\n        margin-right: 0 !important;\n        margin-left: 0 !important;\n        padding-top: 0 !important;\n        padding-bottom: 0 !important;\n        padding-right: 0 !important;\n        padding-left: 0 !important;\n      \"\n    />\n  </body>\n</html>\n","data":{"service_info":{"display_name":"The Capture Team","service_logo":"https://static-cdn.numbersprotocol.io/Capture+GradWhite+App.png","service_email":"service@numbersprotocol.io"}}},{"service":"capture","template":"product_listed","language":"zh-hant","rawContent":"<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>Capture NFT 已鑄造完畢並分享於 Capture Explore 頁面！</title>\n  </head>\n\n  <body>\n    <span\n      style=\"\n        background-color: rgb(255, 255, 255);\n        color: rgb(34, 34, 34);\n        font-family: arial, helvetica, sans-serif;\n      \"\n      >親愛的創作者，</span\n    ><br />\n\n    <div>\n      <p>\n        您的 Capture (<a href=\"{{product.link}}\">{{product.nid}}</a>) 已上架到\n        Capture Explore 頁面並分享給所有的 Capture 社群成員！準備好被收藏了！\n      </p>\n    </div>\n\n    <br />\n\n    <div>\n      <p>\n        敬祝 平安順心\n        <br />\n\n        {{service_info.display_name}}敬上\n        <br />\n\n        <img\n          style=\"display: block; border: 0px; max-width: 50px; padding: 4px\"\n          title=\"Logo\"\n          src=\"{{service_info.service_logo}}\"\n          alt=\"\"\n          width=\"50\"\n          height=\"50\"\n        />\n      </p>\n    </div>\n\n    <img\n      src=\"http://mailman.numbersprotocol.io/wf/open?upn=u001.HeftvF14cSotjid365zfecDiVnzTWkdXu7DaahjGTxqAckyFKnY9L9SwrVVegumYpn4FfkedkCNNc4PYJhZB-2FTCQ7dqTW6VGkos-2BLBWVuR7Tx0YbyLAYXjxft9CCfr2O-2FWQduxuX-2F0wTbYI7pek-2FwdowB7-2BslQlwJNCBnBTX6TDkppWzFDFFsIHOh-2FcIOIq5xgRF0n1iNscS-2BUwFUzbTpxXCnrbiGDLptVzpW-2FQqpC0-3D\"\n      alt=\"\"\n      width=\"1\"\n      height=\"1\"\n      border=\"0\"\n      style=\"\n        height: 1px !important;\n        width: 1px !important;\n        border-width: 0 !important;\n        margin-top: 0 !important;\n        margin-bottom: 0 !important;\n        margin-right: 0 !important;\n        margin-left: 0 !important;\n        padding-top: 0 !important;\n        padding-bottom: 0 !important;\n        padding-right: 0 !important;\n        padding-left: 0 !important;\n      \"\n    />\n  </body>\n</html>\n","data":{"service_info":{"display_name":"The Capture Team","service_logo":"https://static-cdn.numbersprotocol.io/Capture+GradWhite+App.png","service_email":"service@numbersprotocol.io"}}}];
+      const sidebar = document.getElementById('sidebar');
+      const preview = document.getElementById('preview');
+
+      sidebar.addEventListener('click', (event) => {
+        const item = event.target.closest('.template-item');
+        if (!item) return;
+
+        const { service, template, language } = item.dataset;
+        const selectedTemplate = templates.find(t => t.service === service && t.template === template && t.language === language);
+
+        if (selectedTemplate) {
+          console.log('Selected Template:', selectedTemplate);
+          const renderedContent = replaceVariables(selectedTemplate.rawContent, selectedTemplate.data);
+          console.log('Rendered Content:', renderedContent);
+          preview.innerHTML = renderedContent;
+        }
+      });
+    });
+
+    const replaceVariables = (template, data) => {
+  return template.replace(/{{\s*(\w+(?:\.\w+)*)\s*}}/g, (match, key) => {
+    console.log(`Processing key: ${key}`);
+    const keys = key.split(".");
+    let value = data;
+    for (const k of keys) {
+      if (value[k] === undefined) {
+        console.log(`Key not found: ${k}, returning original placeholder`);
+        return match;
+      }
+      value = value[k];
+      console.log(`Key found: ${k}, current value: ${value}`);
+    }
+    return value;
+  });
+};
+  </script>
+</head>
+<body>
+  <div id="sidebar">
+    <div class="template-item" data-service="capture" data-template="password_changed_confirmation" data-language="en-us">
+      capture - password_changed_confirmation (en-us)
+    </div>
+<div class="template-item" data-service="capture" data-template="password_reset" data-language="en-us">
+      capture - password_reset (en-us)
+    </div>
+<div class="template-item" data-service="capture" data-template="password_reset" data-language="zh-hant">
+      capture - password_reset (zh-hant)
+    </div>
+<div class="template-item" data-service="capture" data-template="product_confirmed" data-language="en-us">
+      capture - product_confirmed (en-us)
+    </div>
+<div class="template-item" data-service="capture" data-template="product_listed" data-language="zh-hant">
+      capture - product_listed (zh-hant)
+    </div>
+  </div>
+  <div id="preview"></div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <table
+      align="center"
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      width="100%"
+    >
+      <tr>
+        <td align="left" style="padding: 30px">
+          <p>您最近請求變更 {{service_info.display_name}} 帳戶的密碼。</p>
+        </td>
+      </tr>
+      <tr>
+        <td align="left" style="padding: 30px">
+          <p>請至以下網頁重設您的密碼：</p>
+          <a href="{{actionUrl}}">{{actionUrl}}</a>
+        </td>
+      </tr>
+    </table>
+    <div>
+      <p>
+        敬祝 平安順心
+        <br />
+
+        {{service_info.display_name}}敬上
+        <br />
+
+        <img
+          style="display: block; border: 0px; max-width: 50px; padding: 4px"
+          title="Logo"
+          src="{{service_info.service_logo}}"
+          alt=""
+          width="50"
+          height="50"
+        />
+      </p>
+    </div>
+  </body>
+</html>

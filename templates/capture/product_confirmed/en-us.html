@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Capture NFT Purchase Confirmation</title>
+  </head>
+
+  <body>
+    <span>Hello,</span><br />
+
+    <div>
+      <p>
+        Thank you for joining us in building a better digital future through
+        Capture. Your NFT purchase has been confirmed. Below are the details of
+        your order:
+      </p>
+      <hr />
+
+      <div><strong>Order Number: </strong>{{order.id}}</div>
+      <div><strong>Order Date: </strong>{{order.date}}</div>
+      <div><strong>Payment Amount: </strong>{{order.payment_amount}}</div>
+      <div><strong>Payment Method: </strong>{{order.payment_method}}</div>
+      <div><strong>Contact Email: </strong>{{service_info.service_email}}</div>
+      <hr />
+
+      <p><strong>Purchased Assets</strong></p>
+      <ol>
+        <li>
+          <strong>Asset Nid: </strong>
+          {{order.nid}}
+        </li>
+        <li>
+          <strong>NFT Network: </strong
+          ><a href="{{order.nft_network_link}}">{{order.nft_network}}</a>
+        </li>
+        <li>
+          <strong>NFT Token ID: </strong
+          ><a href="{{order.nft_token_link}}">{{order.nft_token_id}}</a>
+        </li>
+      </ol>
+      <hr />
+
+      <p><strong>Download Instructions</strong></p>
+
+      <p>
+        Once the NFT minting and transfer are complete, you will be able to
+        download your purchased NFT from this
+        <a href="{{order.nft_download_link}}">link</a>
+        within 24 hours. Each NFT includes its own specific license terms.
+        Please visit the
+        <a href="{{order.nft_page_link}}">Capture page</a>
+        of your NFT to review the attached license.
+      </p>
+
+      <p>
+        If you have any questions or need assistance, please don't hesitate to
+        contact our support team at
+        <a href="mailto:{{service_info.service_email}}"
+          >{{service_info.service_email}}</a
+        >.
+      </p>
+    </div>
+
+    <div>
+      <p>
+        Best regards,
+        <br />
+
+        {{service_info.display_name}}
+        <br />
+
+        <img
+          style="display: block; border: 0px; max-width: 50px; padding: 4px"
+          title="Logo"
+          src="{{service_info.service_logo}}"
+          alt=""
+          width="50"
+          height="50"
+        />
+      </p>
+    </div>
+
+    <img
+      src="http://mailman.numbersprotocol.io/wf/open?upn=u001.nhRthI-2Fe2lEovw0OegR3JN5Gwhi3f8xG-2F8yg27sBoLajIi764tWHJuURUv5QVqOS4XmLgJcS6y-2B117EY-2FmOCt8Ail8ArN5CaOR-2FQqZfW5jGRar07ofxBDY7K6B4jwassRX6ZiJPIUaKT4dju8saXApdsz-2BXjDjuQgkr7fpwymhu9kFH1pNHz847G3nftgiiuHJCN90HNx3MbH6lLmAn5ZYSoaAfZIPMfcwzrfT5LQD8-3D"
+      alt=""
+      width="1"
+      height="1"
+      border="0"
+      style="
+        height: 1px !important;
+        width: 1px !important;
+        border-width: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+      "
+    />
+  </body>
+</html>
