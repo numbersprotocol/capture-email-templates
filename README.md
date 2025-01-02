@@ -1,6 +1,6 @@
 # Capture Email Templates Repository
 
-This repository is designed to manage email templates and test data for the `capture` service. It provides a structured way to organize, validate, and preview email templates.
+This repository is designed to manage email templates and test data for the `capture` service. It is structured to make it easy for anyone, including new developers, to create, edit, validate, and preview email templates. You can use any text editor you prefer to edit the HTML files.
 
 ## Repository Structure
 
@@ -17,10 +17,14 @@ This repository is designed to manage email templates and test data for the `cap
   - `service-name`: `capture`
   - `language`: `en-us`
 
+- **Fallback Behavior:**
+  - If a specific language HTML file does not exist for a service and the user has set that language in their preferences, the system will first fall back to `en-us` for that service.
+  - If the `en-us` file also does not exist for the service, the system will fall back to the `capture` service's template for the same template name.
+
 Example:
 
 ```sh
-./templates/capture/password-reset/en-us.html
+./templates/capture/password_reset/en-us.html
 ```
 
 ### `./test`
@@ -37,14 +41,14 @@ Example:
 Example:
 
 ```sh
-./test/password-reset/data.json
+./test/password_reset/data.json
 ```
 
 Sample content for `data.json`:
 
 ```json
 {
-  "actionUrl": "https://api.numbersprotocol.io/account/password-reset/0/0",
+  "actionUrl": "https://api.numbersprotocol.io/account/password_reset/0/0",
   "service_info": {
     "display_name": "The Capture Team",
     "service_logo": "https://static-cdn.numbersprotocol.io/Capture+GradWhite+App.png"
@@ -67,11 +71,11 @@ Sample content for `data.json`:
    Replace `<new-service-name>` with the name of your new service.
 
 2. **Edit the Templates:**
-   Navigate to the new service's directory and update the templates as needed.
+   Navigate to the new service's directory and update the templates as needed. Use any editor you prefer.
    Example:
 
    ```sh
-   nano ./templates/<new-service-name>/password-reset/en-us.html
+   nano ./templates/<new-service-name>/password_reset/en-us.html
    ```
 
 3. **Add or Modify Test Data:**
@@ -79,7 +83,7 @@ Sample content for `data.json`:
    Example:
 
    ```sh
-   nano ./test/password-reset/data.json
+   nano ./test/password_reset/data.json
    ```
 
 4. **Validate Your HTML:**
@@ -88,7 +92,7 @@ Sample content for `data.json`:
 ### Modifying an Existing Template
 
 1. Locate the template in `./templates/<service-name>/<template-name>/<language>.html`.
-2. Make your changes.
+2. Make your changes using your preferred editor.
 3. Update the corresponding test data in `./test/<template-name>/data.json` if needed.
 4. Run `npm run test` to validate the changes.
 5. Preview your changes using `npm run build` and `npm run dev`.
@@ -113,10 +117,3 @@ Starts a local development server at `http://localhost:3000` to preview email co
 2. Start the development server using `npm run dev`.
 3. Open `http://localhost:3000` in your browser.
 4. Select a template from the sidebar to view its content on the right-hand side.
-
-## Defaults
-
-- **Service:** `capture`
-- **Language:** `en-us`
-
-When adding or modifying templates, these defaults will be used unless specified otherwise.
