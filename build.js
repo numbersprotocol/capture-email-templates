@@ -34,7 +34,7 @@ const createIndexHtml = (templates) => {
     })
     .join("\n");
 
-  return `<!DOCTYPE html>
+  return `
 <html lang="en">
 <head>
   <meta charset="UTF-8">
