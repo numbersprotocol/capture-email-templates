@@ -1,0 +1,19 @@
+{
+  "service_info": {
+    "display_name": "The Capture Team",
+    "service_logo": "https://static-cdn.numbersprotocol.io/Capture+GradWhite+App.png",
+    "service_email": "service@numbersprotocol.io"
+  },
+  "dashboard_link": "https://dashboard.captureapp.xyz",
+  "cam_link": "https://captureapp.xyz/products/camera",
+  "order": {
+    "nid": "bafkreib5zltexzwsqzigcjffxaslvzulkrs4u7sbfsnz7uny3jyxtg5sv4",
+    "asset_link": "https://asset.captureapp.xyz/bafkreib5zltexzwsqzigcjffxaslvzulkrs4u7sbfsnz7uny3jyxtg5sv4?chain_id=10507&contract=0x0C8C81D6954db5bF8c49D58Cb81340E023D6f530&token_id=16396",
+    "date": "January 03, 2025",
+    "quantity": 1,
+    "price_base": "NUM",
+    "collection_price": "$10",
+    "service_fee": "$1.2",
+    "income": "$8.8"
+  }
+}

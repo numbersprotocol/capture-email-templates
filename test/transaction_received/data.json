@@ -1,0 +1,13 @@
+{
+  "service_info": {
+    "display_name": "The Capture Team",
+    "service_logo": "https://static-cdn.numbersprotocol.io/Capture+GradWhite+App.png",
+    "service_email": "service@numbersprotocol.io"
+  },
+  "dashboard_link": "https://dashboard.captureapp.xyz",
+  "cam_link": "https://captureapp.xyz/products/camera",
+  "asset": {
+    "nid": "bafybeicouhqsogigu5rbwf4xtczl7asg5itvsn5mkcedcvkwjrq42gxyju",
+    "link": "https://asset.captureapp.xyz/bafybeicouhqsogigu5rbwf4xtczl7asg5itvsn5mkcedcvkwjrq42gxyju"
+  }
+}

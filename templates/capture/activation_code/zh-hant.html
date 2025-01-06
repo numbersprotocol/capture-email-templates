@@ -3,9 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>
-      Your {{service_info.display_name}} password has been successfully changed!
-    </title>
+    <title>{{service_info.display_name}} 帳戶啟用</title>
   </head>
 
   <body>
@@ -18,16 +16,23 @@
     >
       <tr>
         <td align="left" style="padding: 30px">
-          <p>Your password has been changed!</p>
-          <p>No further action is needed if the password is changed by you.</p>
+          <p>
+            您收到這封電子郵件是因為您需要完成 {{service_info.display_name}}
+            帳戶啟用程序。
+          </p>
         </td>
       </tr>
       <tr>
-        <td align="left" style="padding: 30px">
+        <td align="center" style="padding: 30px">
+          <p>請到以下頁面啟用您的帳戶：</p>
           <p>
-            If you did not change your password recently, please contact us
-            immediately for your account security.
+            <a href="{{action_url}}">{{action_url}}</a>
           </p>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" style="padding: 30px">
+          <p>感謝使用 {{service_info.display_name}}！</p>
         </td>
       </tr>
     </table>
@@ -40,7 +45,7 @@
 
         {{service_info.display_name}}
         <br />
-        Email:
+        信箱：
         <a href="mailto:{{service_info.service_email}}">
           {{service_info.service_email}}
         </a>

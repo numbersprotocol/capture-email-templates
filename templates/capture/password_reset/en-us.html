@@ -22,7 +22,7 @@
       <tr>
         <td align="left" style="padding: 30px">
           <p>Please go to the following page and reset your password:</p>
-          <a href="{{actionUrl}}">{{actionUrl}}</a>
+          <a href="{{action_url}}">{{action_url}}</a>
         </td>
       </tr>
     </table>
@@ -31,6 +31,11 @@
         Best regards,
         <br />
         {{service_info.display_name}}
+        <br />
+        Email:
+        <a href="mailto:{{service_info.service_email}}">
+          {{service_info.service_email}}
+        </a>
         <br />
 
         <img

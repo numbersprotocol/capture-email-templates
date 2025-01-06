@@ -48,7 +48,7 @@ Sample content for `data.json`:
 
 ```json
 {
-  "actionUrl": "https://api.numbersprotocol.io/account/password_reset/0/0",
+  "action_url": "https://api.numbersprotocol.io/account/password_reset/0/0",
   "service_info": {
     "display_name": "The Capture Team",
     "service_logo": "https://static-cdn.numbersprotocol.io/Capture+GradWhite+App.png"

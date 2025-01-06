@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>
-      Your {{service_info.display_name}} password has been successfully changed!
-    </title>
+    <title>Account activation on {{service_info.display_name}}</title>
   </head>
 
   <body>
@@ -18,16 +16,23 @@
     >
       <tr>
         <td align="left" style="padding: 30px">
-          <p>Your password has been changed!</p>
-          <p>No further action is needed if the password is changed by you.</p>
+          <p>
+            You're receiving this email because you need to finish the
+            activation process on {{service_info.display_name}}.
+          </p>
         </td>
       </tr>
       <tr>
-        <td align="left" style="padding: 30px">
+        <td align="center" style="padding: 30px">
+          <p>Please go to the following page to activate your account:</p>
           <p>
-            If you did not change your password recently, please contact us
-            immediately for your account security.
+            <a href="{{action_url}}">{{action_url}}</a>
           </p>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" style="padding: 30px">
+          <p>Thanks for using {{service_info.display_name}}!</p>
         </td>
       </tr>
     </table>

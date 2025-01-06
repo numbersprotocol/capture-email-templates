@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Capture has been collected!</title>
+  </head>
+
+  <body>
+    <span
+      style="
+        background-color: rgb(255, 255, 255);
+        color: rgb(34, 34, 34);
+        font-family: arial, helvetica, sans-serif;
+      "
+      >Dear creator,</span
+    ><br />
+
+    <div>
+      <p>
+        Your Capture has been collected.
+
+        <br />
+        See the details below:
+      </p>
+      <ul>
+        <li>Transaction Date: {{order.date}}</li>
+        <li>
+          Capture Nid:
+          <a href="{{order.asset_link}}">{{order.nid}}</a>
+        </li>
+        <li>Quantity: {{order.quantity}}</li>
+        <li>
+          Collection Price ({{order.price_base}}): {{order.collection_price}}
+        </li>
+        <li>
+          Platform Service Fee ({{order.price_base}}): {{order.service_fee}}
+          (12%)
+        </li>
+        <li>Income ({{order.price_base}}): {{order.income}}</li>
+      </ul>
+    </div>
+    <div>
+      <p>
+        Your sales proceeds will be credited to your Capture wallet. If the
+        payment was proceeded with credit card, it would take 7 days until you
+        may withdraw the fund due to the regulation.
+      </p>
+    </div>
+    <div>
+      <p>
+        To view your updated balance, please visit the
+        <a href="{{cam_link}}">Capture Cam App</a>
+        or
+        <a href="{{dashboard_link}}">Capture Dashboard</a>, navigate to the menu
+        and click "wallet".
+      </p>
+    </div>
+
+    <div>
+      <p>
+        We appreciate your contributions to our platform and look forward to
+        more successful transactions!
+      </p>
+    </div>
+
+    <div>
+      <p>
+        Best regards,
+        <br />
+
+        {{service_info.display_name}}
+        <br />
+
+        <img
+          style="display: block; border: 0px; max-width: 50px; padding: 4px"
+          title="Logo"
+          src="{{service_info.service_logo}}"
+          alt=""
+          width="50"
+          height="50"
+        />
+      </p>
+    </div>
+  </body>
+</html>

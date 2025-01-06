@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>{{service_info.display_name}} 密碼重置</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Your {{service_info.display_name}} account has been successfully
+      activated!
+    </title>
   </head>
+
   <body>
     <table
       align="center"
@@ -13,22 +19,18 @@
     >
       <tr>
         <td align="left" style="padding: 30px">
-          <p>您最近請求變更 {{service_info.display_name}} 帳戶的密碼。</p>
-        </td>
-      </tr>
-      <tr>
-        <td align="left" style="padding: 30px">
-          <p>請至以下網頁重設您的密碼：</p>
-          <a href="{{action_url}}">{{action_url}}</a>
+          <p>Your account has been activated!</p>
         </td>
       </tr>
     </table>
+    <br />
+
     <div>
       <p>
-        敬祝 平安順心
+        Best regards,
         <br />
 
-        {{service_info.display_name}}敬上
+        {{service_info.display_name}}
         <br />
         Email:
         <a href="mailto:{{service_info.service_email}}">
