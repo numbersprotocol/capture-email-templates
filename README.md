@@ -1,6 +1,12 @@
 # Capture Email Templates Repository
 
-This repository is designed to manage email templates and test data for the `capture` service. It is structured to make it easy for anyone, including new developers, to create, edit, validate, and preview email templates. You can use any text editor you prefer to edit the HTML files.
+This repository is designed to manage email templates and test data for the `capture` service. It is built to make it simple and accessible for anyone, including new developers, to create, edit, validate, and preview email templates. You can edit the HTML files using any text editor you prefer.
+
+The Capture service fetches email templates in real time. However, due to a caching mechanism, it may take up to one hour for template updates to take effect.
+
+## Service Name
+
+To create customized email templates for Capture-powered services, please contact the Numbers Team at **hi@numbersprotocol.io** to obtain an API Key and reserve a unique service name. You can also optionally customize the service logo and service email used in the templates.
 
 ## Repository Structure
 
