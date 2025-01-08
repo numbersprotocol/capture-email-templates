@@ -17,43 +17,40 @@
 
     <div>
       <p>
-        Your Capture has been collected.
+        恭喜您！您的 Capture 作品已被收藏！
 
         <br />
-        See the details below:
+        以下是交易細節：
       </p>
       <ul>
-        <li>Transaction Date: {{order.date}}</li>
+        <li>交易日期 {{order.date}}</li>
         <li>
-          Capture Nid:
+          Capture Nid：
           <a href="{{order.asset_link}}">{{order.nid}}</a>
         </li>
-        <li>Quantity: {{order.quantity}}</li>
+        <li>數量： {{order.quantity}}</li>
+        <li>收藏價格 ({{order.price_base}})： {{order.collection_price}}</li>
         <li>
-          Collection Price ({{order.price_base}}): {{order.collection_price}}
+          平台服務費 ({{order.price_base}})： {{order.service_fee}} （12%）
         </li>
-        <li>
-          Platform Service Fee ({{order.price_base}}): {{order.service_fee}}
-          (12%)
-        </li>
-        <li>Income ({{order.price_base}}): {{order.income}}</li>
+        <li>實收金額 ({{order.price_base}})： {{order.income}}</li>
       </ul>
     </div>
     <div>
       <p>*備注：所有者的收益分成是{{order.share_percentage}}。</p>
       <p>
-        Your sales proceeds will be credited to your Capture wallet. If the
-        payment was proceeded with credit card, it would take 7 days until you
-        may withdraw the fund due to the regulation.
+        您的銷售所得將會直接匯入您的 Capture
+        錢包。如果是信用卡付款，根據相關規定，需要等待 7
+        天的資金保管期才能提領。
       </p>
     </div>
     <div>
       <p>
-        To view your updated balance, please visit the
+        想查看最新的錢包餘額，請開啟
         <a href="{{cam_link}}">Capture Cam App</a>
-        or
-        <a href="{{dashboard_link}}">Capture Dashboard</a>, navigate to the menu
-        and click "wallet".
+        或登入
+        <a href="{{dashboard_link}}">Capture Dashboard</a
+        >點選選單中的「錢包」查看。
       </p>
     </div>
 
