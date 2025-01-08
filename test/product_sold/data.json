@@ -14,6 +14,7 @@
     "price_base": "NUM",
     "collection_price": "$10",
     "service_fee": "$1.2",
-    "income": "$8.8"
+    "income": "$8.8",
+    "share_percentage": "58%"
   }
 }
