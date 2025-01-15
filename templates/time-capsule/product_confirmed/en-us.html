@@ -1,0 +1,83 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Capture NFT Purchase Confirmation</title>
+  </head>
+
+  <body>
+    <span>Hello,</span><br />
+
+    <div>
+      <p>
+        Thank you for joining us in building a better digital future through
+        Capture. Your NFT purchase has been confirmed. Below are the details of
+        your order:
+      </p>
+      <hr />
+
+      <div><strong>Order Number: </strong>{{order.id}}</div>
+      <div><strong>Order Date: </strong>{{order.date}}</div>
+      <div><strong>Payment Amount: </strong>{{order.payment_amount}}</div>
+      <div><strong>Payment Method: </strong>{{order.payment_method}}</div>
+      <div><strong>Contact Email: </strong>admin1@lollipoppool.org</div>
+      <hr />
+
+      <p><strong>Purchased Assets</strong></p>
+      <ol>
+        <li>
+          <strong>Asset Nid: </strong>
+          {{order.nid}}
+        </li>
+        <li>
+          <strong>NFT Network: </strong
+          ><a href="{{order.nft_network_link}}">{{order.nft_network}}</a>
+        </li>
+        <li>
+          <strong>NFT Token ID: </strong
+          ><a href="{{order.nft_token_link}}">{{order.nft_token_id}}</a>
+        </li>
+      </ol>
+      <hr />
+
+      <p><strong>Download Instructions</strong></p>
+
+      <p>
+        Once the NFT minting and transfer are complete, you will be able to
+        download your purchased NFT from this
+        <a href="{{order.nft_download_link}}">link</a>
+        within 24 hours. Each NFT includes its own specific license terms.
+        Please visit the
+        <a href="{{order.nft_page_link}}">Capture page</a>
+        of your NFT to review the attached license.
+      </p>
+
+      <p>
+        If you have any questions or need assistance, please don't hesitate to
+        contact our support team at
+        <a href="mailto:admin1@lollipoppool.org"
+          >admin1@lollipoppool.org</a
+        >.
+      </p>
+    </div>
+
+    <div>
+      <p>
+        Best regards,
+        <br />
+
+        LOLLIPOP Time Capsule
+        <br />
+
+        <img
+          style="display: block; border: 0px;  padding: 4px"
+          title="Logo"
+          alt="Logo"
+          src="https://lollipoppool.org/tc/resources/images/time-capsule-logo.svg"
+          width="150"
+          height="50"
+        />
+      </p>
+    </div>
+  </body>
+</html>

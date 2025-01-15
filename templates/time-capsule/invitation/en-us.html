@@ -1,0 +1,85 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Capture Delivery Center</title>
+  </head>
+
+  <body>
+    <table
+      align="center"
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      width="100%"
+    >
+      <tr>
+        <td align="left" style="padding: 30px">
+          <p>Hi there,</p>
+          <br />
+          <p>
+            {{from_email}} has just sent a Capture to share an important Moment
+            with you!
+          </p>
+          <p>Check out the magic moment on Capture now!</p>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" style="padding: 30px">
+          <img
+            src="{{image_url}}"
+            class="img-fluid"
+            alt="Capture Moment"
+            width="300"
+            style="
+              display: block;
+              padding: 1px;
+              border: 1px solid darkgray;
+              border-radius: 1px;
+            "
+          />
+          <p>{{timestamp}} {{location}}</p>
+          <p
+            style="
+              background: #f9f9f9;
+              border-left: 10px solid #ccc;
+              margin: 1.5em 10px;
+              padding: 0.5em 10px;
+            "
+          >
+            {{caption}}
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" style="padding: 30px">
+          <p>
+            Download
+            <a href="{{cam_link}}">Capture Cam</a>
+            to accept the gift from {{from_email}} in your inbox and view more.
+          </p>
+        </td>
+      </tr>
+    </table>
+    <br />
+
+    <div>
+      <p>
+        Best regards,
+        <br />
+
+        LOLLIPOP Time Capsule
+        <br />
+
+        <img
+          style="display: block; border: 0px;  padding: 4px"
+          title="Logo"
+          alt="Logo"
+          src="https://lollipoppool.org/tc/resources/images/time-capsule-logo.svg"
+          width="150"
+          height="50"
+        />
+      </p>
+    </div>
+  </body>
+</html>
