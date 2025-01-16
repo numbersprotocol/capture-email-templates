@@ -26,7 +26,7 @@
         <li>Transaction Date: {{order.date}}</li>
         <li>
           Capsule Nid:
-          <a href="{{order.asset_link}}">{{order.nid}}</a>
+          {{order.nid}}
         </li>
         <li>Quantity: {{order.quantity}}</li>
         <li>
@@ -42,16 +42,15 @@
     <div>
       <p>*Note: The owner share of {{order.share_percentage}} is the income.</p>
       <p>
-        Your sales proceeds will be credited to your TimeCapsule Lollipop wallet. If the
-        payment was proceeded with credit card, it would take 7 days until you
-        may withdraw the fund due to the regulation.
+        Your sales proceeds will be credited to your TimeCapsule Lollipop wallet.
       </p>
     </div>
     <div>
       <p>
         To view your updated balance, please visit the
         <a href="https://apps.apple.com/us/app/timecapsule-lollipop/id6670163614">TimeCapsule Lollipop App</a>
-        navigate to the menu and click "wallet".
+        , navigate to the menu
+        and click "wallet".
       </p>
     </div>
 

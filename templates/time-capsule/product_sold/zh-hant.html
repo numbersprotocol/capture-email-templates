@@ -26,7 +26,7 @@
         <li>交易日期： {{order.date}}</li>
         <li>
           Capsule Nid：
-          <a href="{{order.asset_link}}">{{order.nid}}</a>
+          {{order.nid}}
         </li>
         <li>數量： {{order.quantity}}</li>
         <li>收藏價格 ({{order.price_base}})： {{order.collection_price}}</li>
@@ -40,8 +40,7 @@
       <p>*備注：所有者的收益分成是{{order.share_percentage}}。</p>
       <p>
         您的銷售所得將會直接匯入您的 TimeCapsule Lollipop
-        錢包。如果是信用卡付款，根據相關規定，需要等待 7
-        天的資金保管期才能提領。
+        錢包。
       </p>
     </div>
     <div>
