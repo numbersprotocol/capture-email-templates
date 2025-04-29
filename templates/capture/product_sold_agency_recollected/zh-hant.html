@@ -33,11 +33,15 @@
         <li>
           平台服務費 ({{order.price_base}})： {{order.service_fee}} （12%）
         </li>
+        <li>
+          代理抽成 ({{ order.price_base }}): {{ order.agency_fee }}
+          （{{ order.agency_name }} 抽成 {{ order.agency_fee_pct }}%)
+        </li>
         <li>實收金額 ({{order.price_base}})： {{order.income}}</li>
       </ul>
     </div>
     <div>
-      <p>*備注：原作者的收益分成是30%。</p>
+      <p>*備注：原作者的收益分成是{{order.share_percentage}}。</p>
       <p>
         您的銷售所得將會直接匯入您的 Capture
         錢包。如果是信用卡付款，根據相關規定，需要等待 7
