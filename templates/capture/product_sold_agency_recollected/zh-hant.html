@@ -1,0 +1,83 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>您的 Capture 已被再收藏！</title>
+  </head>
+
+  <body>
+    <span
+      style="
+        background-color: rgb(255, 255, 255);
+        color: rgb(34, 34, 34);
+        font-family: arial, helvetica, sans-serif;
+      "
+      >親愛的創作者，</span
+    ><br />
+
+    <div>
+      <p>
+        恭喜您！您的 Capture 作品已被再收藏！
+
+        <br />
+        以下是交易細節：
+      </p>
+      <ul>
+        <li>交易日期： {{order.date}}</li>
+        <li>
+          Capture Nid：
+          <a href="{{order.asset_link}}">{{order.nid}}</a>
+        </li>
+        <li>數量： {{order.quantity}}</li>
+        <li>收藏價格 ({{order.price_base}})： {{order.collection_price}}</li>
+        <li>
+          平台服務費 ({{order.price_base}})： {{order.service_fee}} （12%）
+        </li>
+        <li>
+          代理抽成 ({{ order.price_base }}): {{ order.agency_fee }}
+          （{{ order.agency_name }} 抽成 {{ order.agency_fee_pct }}%)
+        </li>
+        <li>實收金額 ({{order.price_base}})： {{order.income}}</li>
+      </ul>
+    </div>
+    <div>
+      <p>*備注：原作者的收益分成是{{order.share_percentage}}。</p>
+      <p>
+        您的銷售所得將會直接匯入您的 Capture
+        錢包。如果是信用卡付款，根據相關規定，需要等待 7
+        天的資金保管期才能提領。
+      </p>
+    </div>
+    <div>
+      <p>
+        想查看最新的錢包餘額，請開啟
+        <a href="{{cam_link}}">Capture Cam App</a>
+        或登入
+        <a href="{{dashboard_link}}">Capture Dashboard</a
+        >點選選單中的「錢包」查看。
+      </p>
+    </div>
+
+    <div>
+      <p>感謝您對我們平台的貢獻，期待更多成功的交易！</p>
+    </div>
+
+    <div>
+      <p>
+        敬祝 平安順心
+        <br />
+
+        {{service_info.display_name}} 團隊敬上
+        <br />
+
+        <img
+          style="display: block; border: 0px; padding: 4px"
+          title="Logo"
+          alt="Logo"
+          src="{{service_info.service_logo}}"
+          height="50"
+        />
+      </p>
+    </div>
+  </body>
+</html>
