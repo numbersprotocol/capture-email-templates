@@ -12,16 +12,16 @@
       <p>
         感謝您加入 Capture，共同建構更美好的數位未來。您的 NFT 購買已確認完成。以下是您的訂單詳情：
       </p>
-      <hr />
 
+      <p>📋 <strong>訂單詳情</strong></p>
       <div><strong>訂單編號：</strong>{{order.id}}</div>
       <div><strong>訂單日期：</strong>{{order.date}}</div>
       <div><strong>付款金額：</strong>{{order.payment_amount}}</div>
       <div><strong>付款方式：</strong>{{order.payment_method}}</div>
       <div><strong>聯絡信箱：</strong>{{service_info.service_email}}</div>
-      <hr />
+      <br />
 
-      <p><strong>已購買的數位資產</strong></p>
+      <p>📄 <strong>已購買的數位資產</strong></p>
       <ol>
         <li>
           <strong>資產 Nid：</strong>
@@ -36,12 +36,12 @@
           ><a href="{{order.nft_token_link}}">{{order.nft_token_id}}</a>
         </li>
       </ol>
-      <hr />
 
-      <p><strong>下載說明</strong></p>
+      <p>📥 <strong>下載說明</strong></p>
 
       <p>
-        NFT 鑄造與轉移完成後，您將能夠在 24 小時內從此<a href="{{order.nft_download_link}}">連結</a>下載您所購買的 NFT。每個 NFT 都包含其專屬的授權條款。請前往您的 NFT 的 <a href="{{order.nft_page_link}}">Capture 頁面</a>查看附帶的授權條款。
+        NFT 鑄造與轉移完成後，您將能夠在 24 小時內從此<a href="{{order.nft_download_link}}">連結</a>下載您所購買的 NFT。每個 NFT 都包含其專屬的授權條款—
+        <a href="{{order.nft_page_link}}">查看資產</a>以在 Capture 頁面上查看附帶的授權條款。
       </p>
 
       <p>
