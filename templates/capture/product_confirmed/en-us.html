@@ -6,77 +6,74 @@
   </head>
 
   <body>
-    <span>Hello,</span><br />
+    <span>Dear Valued Customer,</span><br />
 
     <div>
       <p>
-        Thank you for joining us in building a better digital future through
-        Capture. Your NFT purchase has been confirmed. Below are the details of
-        your order:
+        Thank you for completing your license purchase. Your digital asset has been successfully prepared,
+        and all relevant purchase information and files are now available for immediate viewing and download.
       </p>
 
-      <p>📋 <strong>Order Details</strong></p>
-      <div><strong>Order Number: </strong>{{order.id}}</div>
-      <div><strong>Order Date: </strong>{{order.date}}</div>
-      <div><strong>Payment Amount: </strong>{{order.payment_amount}}</div>
-      <div><strong>Payment Method: </strong>{{order.payment_method}}</div>
-      <div><strong>Contact Email: </strong>{{service_info.service_email}}</div>
+      <p><strong>Purchase Details</strong></p>
+      <div><strong>Order Number | </strong>{{order.id}}</div>
+      <div><strong>Order Date | </strong>{{order.date}}</div>
+      <div><strong>Amount | </strong>{{order.payment_amount}}</div>
+      <div><strong>Contact Email | </strong>{{service_info.service_email}}</div>
       <br />
 
-      <p>📄 <strong>Purchased Assets</strong></p>
-      <ol>
-        <li>
-          <strong>Asset Nid: </strong>
-          {{order.nid}}
-        </li>
-        <li>
-          <strong>NFT Network: </strong
-          ><a href="{{order.nft_network_link}}">{{order.nft_network}}</a>
-        </li>
-        <li>
-          <strong>NFT Token ID: </strong
-          ><a href="{{order.nft_token_link}}">{{order.nft_token_id}}</a>
-        </li>
-      </ol>
+      <p><strong>Your Purchased Asset</strong></p>
+      <div><strong>Asset NID | </strong>{{order.nid}}</div>
+      <div>
+        <strong>View Asset | </strong><a href="{{order.nft_page_link}}">{{order.nft_page_link}}</a>
+      </div>
+      <br />
 
-      <p>📥 <strong>Download Instructions</strong></p>
+      <p><strong>Next Steps</strong></p>
 
       <p>
-        Once the NFT minting and transfer are complete, you will be able to
-        download your purchased NFT from this
-        <a href="{{order.nft_download_link}}">link</a>
-        within 24 hours. Each NFT includes its own specific license terms—
-        <a href="{{order.nft_page_link}}">View Asset</a> to review the attached license on the Capture page.
+        📋 <strong>View Your Purchase:</strong> You may use your contact email to log in to your Capture account
+        (<a href="https://dashboard.captureapp.xyz/">https://dashboard.captureapp.xyz/</a>)
+        and view your purchased content. If this is your first time logging in, please click "Reset Password"
+        to set up your dedicated password.
       </p>
 
       <p>
-        You can also view your assets on <a href="https://dashboard.captureapp.xyz/">Capture Dashboard</a> or visit the <a href="https://asset.captureapp.xyz/{{order.nid}}">asset page</a> directly.
+        📄 <strong>License Usage Rights:</strong> Your purchase includes specific licensing rights. The detailed
+        license agreement and full terms (including scope of use, duration, and restrictions) are attached to the
+        asset's Capture page
+        (<a href="{{order.nft_page_link}}"
+          >{{order.nft_page_link}}</a
+        >). Please be sure to review them.
+      </p>
+
+      <p>📥 <strong>Download Files:</strong></p>
+      <p>
+        Method 1: You can download all high-resolution files and related materials directly from your account.
+        After logging in to your Capture account and navigating to the asset page, click the download icon in the
+        top right corner to obtain the original image file with C2PA source verification. Please ensure usage is
+        strictly in accordance with the licensing terms.
+      </p>
+      <p>
+        Method 2: Click this <a href="{{order.nft_download_link}}">link</a>, then right-click and save the file after the new tab opens.
+      </p>
+
+      <p><strong>Customer Support & Contact</strong></p>
+      <p>
+        Our team is ready to support your project at any time. If you have any questions or require assistance with the following:
+      </p>
+      <div>License terms and usage rights</div>
+      <div>Asset download or technical issues</div>
+      <div>Invoicing or payment-related matters</div>
+      <p>Please contact us by email at {{service_info.service_email}}.</p>
+
+      <p>
+        Thank you for your cooperation. We are committed to providing the highest quality support and service for your creative projects.
       </p>
 
       <p>
-        If you have any questions or need assistance, please don't hesitate to
-        contact our support team at
-        <a href="mailto:{{service_info.service_email}}"
-          >{{service_info.service_email}}</a
-        >.
-      </p>
-    </div>
-
-    <div>
-      <p>
-        Best regards,
+        Sincerely,
         <br />
-
-        {{service_info.display_name}}
-        <br />
-
-        <img
-          style="display: block; border: 0px; padding: 4px"
-          title="Logo"
-          alt="Logo"
-          src="{{service_info.service_logo}}"
-          height="50"
-        />
+        The Capture Team
       </p>
     </div>
   </body>
