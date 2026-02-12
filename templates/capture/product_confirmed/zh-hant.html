@@ -13,41 +13,39 @@
         感謝您完成授權購買！您的數位資產已成功備妥，相關購買資訊與檔案已可隨時查看及下載。
       </p>
 
-      <p><strong>購買明細 | </strong></p>
+      <p><strong>購買明細： </strong></p>
       <div><strong>訂單編號 | </strong>{{order.id}}</div>
       <div><strong>訂單日期 | </strong>{{order.date}}</div>
       <div><strong>金額 | </strong>{{order.payment_amount}}</div>
-      <div><strong>聯絡信箱 | </strong>{{service_info.service_email}}</div>
       <br />
 
-      <p><strong>您購買的資產 | </strong></p>
+      <p><strong>您購買的資產： </strong></p>
       <div><strong>資產 Nid | </strong>{{order.nid}}</div>
       <div>
-        <strong>查看資產 | </strong><a href="{{order.nft_page_link}}">{{order.nft_page_link}}</a>
+        <strong>查看資產 | </strong><a href="{{order.nft_page_link}}">資產連結</a>
       </div>
       <br />
 
       <p><strong>接下來該怎麼做？</strong></p>
 
       <p>
-        📋 <strong>查看您的購買內容：</strong>您可以使用聯絡信箱登入 Capture 帳號
+        📋 <strong>查看您的購買內容：</strong>您可以使用收件信箱登入 Capture 帳號
         (<a href="https://dashboard.captureapp.xyz/">https://dashboard.captureapp.xyz/</a>)
         查閱您購買的內容。若您是首次登入，請先點選「重設密碼」來設定您的專屬密碼。
       </p>
 
       <p>
-        📄 <strong>使用權限說明：</strong>您的購買包含特定的授權使用，詳細授權合約及完整條款（包含使用範圍、期限及相關限制）皆已附於資產 Capture 頁面
+        📄 <strong>使用權限說明：</strong>您的購買包含特定的授權使用，詳細授權合約及完整條款（包含使用範圍、期限及相關限制）皆已附於 Capture 資產頁面
         (<a href="{{order.nft_page_link}}"
-          >{{order.nft_page_link}}</a
+          >資產頁面連結</a
         >)，請務必前往查閱。
       </p>
 
       <p>📥 <strong>下載檔案：</strong></p>
       <p>
-        方法一：您可直接從帳號下載所有高解析度檔案及相關素材。登入 Capture 帳戶並進入資產頁面後，點擊右上方的下載圖示，即可取得帶有 C2PA 來源驗證的原始圖檔，請務必依照授權條款使用。
-      </p>
-      <p>
-        方法二：點擊此<a href="{{order.nft_download_link}}">連結</a>，在開啟新分頁後右鍵下載。
+        - 方法一：您可直接從帳號下載所有高解析度檔案及相關素材。登入 Capture 帳戶並進入資產頁面後，點擊右上方的下載圖示，即可取得帶有 C2PA 來源驗證的原始圖檔，請務必依照授權條款使用。
+      <br />
+        - 方法二：點擊此<a href="{{order.nft_download_link}}">連結</a>，在開啟新分頁後右鍵下載。
       </p>
 
       <p><strong>客戶支援與聯繫</strong></p>
