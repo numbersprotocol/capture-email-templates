@@ -1,0 +1,77 @@
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Capture 授權確認 - 您的數位影像授權已就緒</title>
+  </head>
+
+  <body>
+    <span>您好，</span><br />
+
+    <div>
+      <p>
+        感謝您加入 Capture，共同建構更美好的數位未來。您的 NFT 購買已確認完成。以下是您的訂單詳情：
+      </p>
+      <hr />
+
+      <div><strong>訂單編號：</strong>{{order.id}}</div>
+      <div><strong>訂單日期：</strong>{{order.date}}</div>
+      <div><strong>付款金額：</strong>{{order.payment_amount}}</div>
+      <div><strong>付款方式：</strong>{{order.payment_method}}</div>
+      <div><strong>聯絡信箱：</strong>{{service_info.service_email}}</div>
+      <hr />
+
+      <p><strong>已購買的數位資產</strong></p>
+      <ol>
+        <li>
+          <strong>資產 Nid：</strong>
+          {{order.nid}}
+        </li>
+        <li>
+          <strong>NFT 網路：</strong
+          ><a href="{{order.nft_network_link}}">{{order.nft_network}}</a>
+        </li>
+        <li>
+          <strong>NFT Token ID：</strong
+          ><a href="{{order.nft_token_link}}">{{order.nft_token_id}}</a>
+        </li>
+      </ol>
+      <hr />
+
+      <p><strong>下載說明</strong></p>
+
+      <p>
+        NFT 鑄造與轉移完成後，您將能夠在 24 小時內從此<a href="{{order.nft_download_link}}">連結</a>下載您所購買的 NFT。每個 NFT 都包含其專屬的授權條款。請前往您的 NFT 的 <a href="{{order.nft_page_link}}">Capture 頁面</a>查看附帶的授權條款。
+      </p>
+
+      <p>
+        您也可以在 <a href="https://dashboard.captureapp.xyz/">Capture Dashboard</a> 查看您的資產，或直接訪問 <a href="https://asset.captureapp.xyz/{{order.nid}}">資產頁面</a>。
+      </p>
+
+      <p>
+        如果您有任何問題或需要協助，請隨時聯繫我們的客服團隊：
+        <a href="mailto:{{service_info.service_email}}"
+          >{{service_info.service_email}}</a
+        >。
+      </p>
+    </div>
+
+    <div>
+      <p>
+        敬祝 平安順心
+        <br />
+
+        {{service_info.display_name}} 團隊敬上
+        <br />
+
+        <img
+          style="display: block; border: 0px; padding: 4px"
+          title="Logo"
+          alt="Logo"
+          src="{{service_info.service_logo}}"
+          height="50"
+        />
+      </p>
+    </div>
+  </body>
+</html>
